@@ -1,0 +1,81 @@
+﻿/* Reset some basics */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.header {
+    background-color: #004080;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #0066cc;
+}
+
+    .navbar .aspNet-Menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+        .navbar .aspNet-Menu > li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+            .navbar .aspNet-Menu > li > a {
+                color: white !important;
+                text-decoration: none;
+                padding: 15px 10px;
+                display: block;
+            }
+
+                .navbar .aspNet-Menu > li > a:hover,
+                .navbar .aspNet-Menu > li > a:focus {
+                    background-color: #004080;
+                    outline: none;
+                }
+
+.main-content {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.footer {
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 15px 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .navbar .aspNet-Menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .navbar .aspNet-Menu > li {
+            margin: 5px 0;
+        }
+}

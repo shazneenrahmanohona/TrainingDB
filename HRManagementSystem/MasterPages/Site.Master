@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="HR.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="~/Assets/CSS/site.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Header -->
+        <header class="header">
+            <h1>HR Management Portal</h1>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <asp:Menu ID="NavigationMenu" runat="server" Orientation="Horizontal">
+                <Items>
+                    <asp:MenuItem Text="Home" NavigateUrl="~/Pages/Default.aspx" />
+                    <asp:MenuItem Text="About" NavigateUrl="~/Pages/About.aspx" />
+                    <asp:MenuItem Text="Contact" NavigateUrl="~/Pages/Contact.aspx" />
+                    <asp:MenuItem Text="Employees" NavigateUrl="~/Pages/Employees.aspx" />
+                    <asp:MenuItem Text="Reports" NavigateUrl="~/Pages/Reports.aspx" />
+                </Items>
+            </asp:Menu>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 HR Management. All rights reserved.</p>
+        </footer>
+    </form>
+</body>
+</html>
